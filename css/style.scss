@@ -1,0 +1,156 @@
+$mainColor1: #20b2aa;
+$mainColor2: #008080;
+
+* {
+  font-family: 'Saira', sans-serif;
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .15s;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 0 auto;
+  padding: 20px 0 40px;
+  font-size: 64px;
+  @media (max-width: 940px) {
+    font-size: 48px;
+    padding: 30px;
+  }
+  @media (max-width: 580px) {
+    font-size: 36px;
+    padding: 25px;
+    text-align: center;
+  }
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 940px) {
+    flex-wrap: wrap;
+  }
+  &_block {
+    width: 25%;
+    margin: 0 10px;
+    @media (max-width: 940px) {
+      width: 45%;
+      margin: 5px;
+    }
+    .time {
+      background: $mainColor1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      height:150px;
+      font-size: 95px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+    .title {
+      background: $mainColor2;
+      padding: 5px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      text-align: center;
+      color: white;
+
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  @media (max-width: 940px) {
+    padding-top: 30px;
+  }
+  @media (max-width: 580px) {
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  .button {
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 25px;
+    width: 75%;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    color: $mainColor1;
+    @media (max-width: 940px) {
+      margin: 7px;
+      padding: 5px;
+    }
+    @media (max-width: 580px) {
+      margin: 3px;
+    }
+      &:hover {
+        background-color: $mainColor2;
+    }
+    &.reset {
+      &:hover {
+        background-color: darkred;
+      }
+    }
+    &.lap, &.delete {
+      &:disabled {
+        cursor: not-allowed;
+        background-color: lightgray;
+        &:hover {
+          color: darkred;
+        }
+      }
+    }
+  }
+}
+
+.results_block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid $mainColor2;
+  color: $mainColor1;
+  font-size: 22px;
+  width: 80%;
+  margin: 40px auto;
+  padding: 5px;
+  text-align: center;
+  .results_info {
+    margin: 10px 0;
+  }
+  @media (max-width: 940px) {
+    margin: 40px auto;
+  }
+}
+
+.nightModeBtn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 48px;
+  @media (max-width: 580px) {
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
