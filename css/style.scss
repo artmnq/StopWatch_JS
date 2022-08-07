@@ -2,11 +2,11 @@ $mainColor1: #20b2aa;
 $mainColor2: #008080;
 
 * {
-  font-family: 'Saira', sans-serif;
-  margin : 0;
+  font-family: "Saira", sans-serif;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: .15s;
+  transition: 0.15s;
 }
 
 .container {
@@ -53,7 +53,7 @@ h1 {
       justify-content: center;
       align-items: center;
       color: white;
-      height:150px;
+      height: 150px;
       font-size: 95px;
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
@@ -65,7 +65,6 @@ h1 {
       border-bottom-left-radius: 10px;
       text-align: center;
       color: white;
-
     }
   }
 }
@@ -89,7 +88,7 @@ h1 {
     padding: 10px;
     margin: 25px;
     width: 75%;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
     color: $mainColor1;
     @media (max-width: 940px) {
@@ -99,15 +98,16 @@ h1 {
     @media (max-width: 580px) {
       margin: 3px;
     }
-      &:hover {
-        background-color: $mainColor2;
+    &:hover {
+      background-color: $mainColor2;
     }
     &.reset {
       &:hover {
         background-color: darkred;
       }
     }
-    &.lap, &.delete {
+    &.lap,
+    &.delete {
       &:disabled {
         cursor: not-allowed;
         background-color: lightgray;
